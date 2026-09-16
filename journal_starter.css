@@ -13,6 +13,15 @@
 /* ============================================
    STEP 1: BASE RESET & TYPOGRAPHY
    ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+   :root {
+     --main-color: #4a90e2;       /* Blue */
+    --secondary-color: #6c4ab6;  /* Purple */
+    --accent-color: #c0268c;     /* Pink */
+    --text-color: #333333;       /* Dark gray */
+}
+
 
 * {
     margin: 0;
@@ -21,10 +30,13 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: var(--text-color);
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 20px;
 }
 
@@ -39,8 +51,11 @@ body {
 ============================================ */
 
 #main-container {
-    /* YOUR CODE HERE */
-    
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* ============================================
@@ -51,8 +66,10 @@ body {
 ============================================ */
 
 #header-box {
-    /* YOUR CODE HERE */
-    
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 /* ============================================
@@ -63,13 +80,19 @@ body {
 ============================================ */
 
 #sidebar {
-    /* YOUR CODE HERE */
-    
+    float: left;
+    width: 25%;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: white;
 }
 
+
+
 #content-area {
-    /* YOUR CODE HERE */
-    
+    float: left;
+    width: 75%;
+    padding: 15px;
 }
 
 /* ============================================
@@ -79,8 +102,9 @@ body {
 ============================================ */
 
 #main-container::after {
-    /* YOUR CODE HERE */
-    
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* ============================================
@@ -90,14 +114,21 @@ body {
 ============================================ */
 
 .journal-entry {
-    /* YOUR CODE HERE */
-    
+     background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    color: var(--text-color);
 }
 
 .entry-image {
-    /* YOUR CODE HERE */
-    /* Add picture frame effect */
-    
+     float: left;
+    margin-right: 15px;
+    border: 12px solid white;
+    box-shadow: 0 0 0 2px #333;
+    padding: 8px;
+    background: white;
 }
 
 /* ============================================
@@ -107,6 +138,18 @@ body {
 ============================================ */
 
 @media (max-width: 768px) {
-    /* YOUR CODE HERE */
-    
+    #sidebar {
+        float: none;
+        width: 100%;
+    }
+
+    #content-area {
+        float: none;
+        width: 100%;
+    }
+
+    .entry-image {
+        width: 100%;
+        max-width: 300px;
+    }
 }
