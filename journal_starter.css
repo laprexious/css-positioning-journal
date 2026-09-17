@@ -1,4 +1,4 @@
-/* Special Feature: Dark Mode Toggle*/
+/* Special Feature: Dark Mode Toggle and Custom Color Theme & Typography*/
 
 
 /* ============================================
@@ -37,7 +37,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-image: url("background.jpg");
+    background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -127,11 +127,14 @@ body {
 }
 
 .entry-image {
-     float: left;
+    float: left;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     margin-right: 15px;
-    border: 12px solid white;
+    border: 8px solid white;
     box-shadow: 0 0 0 2px #333;
-    padding: 8px;
+    padding: 5px;
     background: white;
 }
 
