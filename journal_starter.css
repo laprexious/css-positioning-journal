@@ -1,3 +1,6 @@
+/* Special Feature: Dark Mode Toggle*/
+
+
 /* ============================================
    HENRY'S JOURNAL - CSS POSITIONING EXERCISE
    STARTER TEMPLATE - FILL IN THE BLANKS!
@@ -6,8 +9,8 @@
    Complete the TODOs below to style the journal.
    Refer to instructions for detailed guidance.
    
-   Author: [Your Name Here]
-   Date: 02/02/2026
+   Author: Laprecious Sanders
+   Date: 09/16/2026
 ============================================ */
 
 /* ============================================
@@ -15,18 +18,19 @@
    ============================================ */
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    padding: 20px;
+    border: solid thick rgb(8, 190, 84)
+    
 }
+
 
 /* ============================================
    STEP 2: MAIN CONTAINER
@@ -39,10 +43,11 @@ body {
 ============================================ */
 
 #main-container {
-    /* YOUR CODE HERE */
+    width: 960px;
+    margin: 20px auto;
+    background: white;
     
 }
-
 /* ============================================
    STEP 3: HEADER STYLING
    ============================================
@@ -51,8 +56,15 @@ body {
 ============================================ */
 
 #header-box {
-    /* YOUR CODE HERE */
-    
+    background-color: hsla(187, 96%, 80%, 0.87);
+    color: darkblue;
+    padding: 20px;
+    border: solid rgb(224, 0, 0);
+    text-align: center;
+}
+
+#header-box h1 {
+    font-size: 2em;
 }
 
 /* ============================================
@@ -63,13 +75,16 @@ body {
 ============================================ */
 
 #sidebar {
-    /* YOUR CODE HERE */
-    
+    float: left;
+    width: 20%;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
 
 #content-area {
-    /* YOUR CODE HERE */
-    
+    float: left;
+    width: 80%;
+    padding: 20px;
 }
 
 /* ============================================
@@ -79,8 +94,9 @@ body {
 ============================================ */
 
 #main-container::after {
-    /* YOUR CODE HERE */
-    
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* ============================================
@@ -90,16 +106,31 @@ body {
 ============================================ */
 
 .journal-entry {
-    /* YOUR CODE HERE */
-    
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .entry-image {
-    /* YOUR CODE HERE */
-    /* Add picture frame effect */
-    
+    float: left;
+    margin-right: 15px;
+    border: 12px solid #fff;
+    box-shadow: 0 0 0 2px #333;
+    padding: 8px;
+    background: white;
 }
 
+.entry-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.entry-date {
+    color: #888;
+    font-size: 0.9em;
+}
 /* ============================================
    STEP 7: RESPONSIVE DESIGN
    ============================================
@@ -107,6 +138,47 @@ body {
 ============================================ */
 
 @media (max-width: 768px) {
-    /* YOUR CODE HERE */
+    #main-container {
+        width: 100%;
+        margin: 0;
+    }
     
+    #sidebar,
+    #content-area {
+        float: none;
+        width: 100%;
+    }
+    
+    #sidebar {
+        margin-bottom: 20px;
+    }
+}
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #f5f5f5;
+    }
+
+    #main-container {
+        background-color: #2b2b2b;
+    }
+
+    #sidebar {
+        background-color: #333;
+    }
+
+    .journal-entry {
+        background-color: #333;
+        border-color: #555;
+    }
+
+    .entry-title {
+        color: #fff;
+    }
+
+    .entry-image {
+        background-color: #333;
+        border-color: #333;
+    }
 }
