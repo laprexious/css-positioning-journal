@@ -124,13 +124,15 @@ body {
 
 .entry-image {
      float: left;
+    width: 40%;
+    max-width: 400px;
+    height: auto;
     margin-right: 15px;
     border: 12px solid white;
     box-shadow: 0 0 0 2px #333;
     padding: 8px;
     background: white;
 }
-
 /* ============================================
    STEP 7: RESPONSIVE DESIGN
    ============================================
