@@ -1,3 +1,6 @@
+/* Special Feature: Dark Mode Toggle*/
+
+
 /* ============================================
    HENRY'S JOURNAL - CSS POSITIONING EXERCISE
    STARTER TEMPLATE - FILL IN THE BLANKS!
@@ -148,5 +151,34 @@ body {
     
     #sidebar {
         margin-bottom: 20px;
+    }
+}
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #f5f5f5;
+    }
+
+    #main-container {
+        background-color: #2b2b2b;
+    }
+
+    #sidebar {
+        background-color: #333;
+    }
+
+    .journal-entry {
+        background-color: #333;
+        border-color: #555;
+    }
+
+    .entry-title {
+        color: #fff;
+    }
+
+    .entry-image {
+        background-color: #333;
+        border-color: #333;
     }
 }
